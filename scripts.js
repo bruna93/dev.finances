@@ -133,8 +133,9 @@ const DOM = {
 }
 
 const Utils = {
-  formatAmount(value) {
-    value = Number(value) * 100
+    formatAmount(value) {
+
+    value = value.replace(".", "").replace(/,/g, '.')
 
     return value
   },
